@@ -1,0 +1,11 @@
+node_modules/
+ibills2/
+*.sublime-workspace
+*.sublime-project
+*.js
+*.js.map
+*.css
+*.css.map
+*.DS_Store
+!gruntfile.js
+.tscache

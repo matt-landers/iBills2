@@ -1,0 +1,28 @@
+@import '../common/variables';
+
+/// ============= Carousel Constants ===============
+
+@padding: 0;
+
+/// =========== Carousel Container ============
+.images-container {
+	height: 50%;
+	width: 100%;
+	z-index: 1000;
+	background-color: #ffffff;
+}
+
+.image-container {
+	.background-cover();
+	height: 100%;
+	width: 100%;
+}
+
+/// =========== plat-carousel Overrides ============
+
+.plat-carousel .plat-carousel-container .plat-carousel-item {
+	padding-right: @padding;
+	padding-top: @padding;
+	padding-bottom: @padding;
+	padding-left: @padding;
+}

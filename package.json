@@ -1,0 +1,41 @@
+{
+  "name": "iBills2",
+  "version": "0.0.1",
+  "description": "Cloud based bill tracking application for all platforms.",
+  "main": "server.js",
+  "private": false,
+  "author": {
+    "name": "Matt Landers",
+    "email": "matt@getplatypi.com"
+  },
+  "dependencies": {
+    "connect": "^2.19.5",
+    "platypus": "latest"
+  },
+  "devDependencies": {
+    "cordova": "^4.0.0",
+    "cordova-icon": "^0.1.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-less": "^0.11.3",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-cordovacli": "^0.5.1",
+    "grunt-open": "^0.2.3",
+    "grunt-shell": "^1.0.1",
+    "grunt-ts": "^1.12.1",
+    "grunt-browserify": "latest",
+    "grunt-tslint": "^0.4.1",
+    "tsd": "^0.5.7",
+    "tslint": "latest",
+    "uri-path": "latest",
+    "moment": "latest"
+  },
+  "scripts": {
+    "postinstall": "node node_modules/grunt-cli/bin/grunt install"
+  }
+}

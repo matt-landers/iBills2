@@ -1,0 +1,76 @@
+@import '../common/variables';
+
+/// ============== Navbar Defaults ===============
+
+.navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: @navbar-height;
+    line-height: @navbar-height;
+    font-weight: normal;
+    color: #ffffff;
+    background-color: @green;
+    -webkit-backface-visibility: hidden;
+    z-index: 10;
+    border-bottom: 2px solid @green-offset;
+}
+
+.navbar-static {
+    position: static;
+}
+
+.navbar-title {
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.navbar-title-top {
+    padding-top: 0.2em;
+    line-height: 1.4em;
+    font-size: 1.3em;
+    color: #ffffff;
+}
+
+.navbar-title-bottom {
+    font-size: 0.80em;
+    line-height: 1.2em;
+    color: #ffffff;
+}
+
+.navbar-action {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4em;
+    cursor: pointer;
+}
+
+.navbar-action:active,
+.navbar-action:active [class=".icon-"],
+.navbar-action:active [class=" .icon-"] {
+    opacity: 0.5;
+}
+
+.navbar-action-left {
+    left: 0;
+    width: 4em;
+    padding-left: @horizontal-container;
+    text-align: left;
+}
+
+.navbar-action-right {
+    right: 0;
+    padding-right: @horizontal-container;
+    text-align: right;
+    -webkit-transition: display 800ms linear;
+    transition: display 800ms linear;
+    z-index: 1;
+}
+
+.navbar-action > i.fa {
+    color: @green-offset-2;
+}

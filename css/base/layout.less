@@ -1,0 +1,136 @@
+@import '../common/variables';
+
+.main {
+	height: 100%;
+}
+
+.container-horizontal {
+	position: relative;
+	padding: 0 @horizontal-container;
+}
+
+/// =============== Login ==================
+
+@spinner-diameter: 50px;
+
+.logo-container {
+	.flexbox();
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	position: relative;
+	top: -@navbar-height;
+	height: 60%;
+	width: 100%;
+	text-align: center;
+	background-color: #ffffff;
+	border-bottom: 1px solid @light-grey;
+	z-index: 6;
+}
+
+.login-logo {
+	max-height: 12em;
+	max-width: 50%;
+}
+
+.flex-direction-column {
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+.grumpy-cat {
+	border: 4px solid #ffffff;
+	-webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+	box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+}
+
+.login-container {
+	position: relative;
+	height: 40%;
+	top: -@navbar-height / 2;
+}
+
+.disclaimer {
+	display: block;
+	position: absolute;
+	bottom: -@navbar-height / 2;
+	left: 0;
+	right: 0;
+	padding: 0.1em 3em;
+	color: @grey;
+	font-size: 0.7em;
+	text-align: center;
+}
+
+[plat-control="plat-viewport"],
+[plat-control="plat-routeport"] {
+	padding-top: @navbar-height;
+	background-color: @background-grey;
+}
+
+/// =============== List ==================
+
+.new-account-container {
+	position: relative;
+	top: 2em;
+	width: 100%;
+	text-align: center;
+}
+
+/// ============== Single =================
+
+.graph-container {
+	position: relative;
+	height: 10em;
+	width: 100%;
+	background-color: #ffffff;
+	overflow: hidden;
+}
+
+.account-name {
+	position: absolute;
+	left: @horizontal-container;
+	bottom: @horizontal-container *2.5;
+	font-size: 1.7em;
+	color: @dark-grey;
+}
+
+.activity-container {
+	// .calc(height; '100% - 12em');
+	width: 100%;
+	//overflow-y: scroll;
+}
+
+/// ============== Profile/Settings =================
+
+.name-container {
+	position: relative;
+	padding: 2em @horizontal-container;
+	text-align: center;
+	background-color: #333333;
+	background:
+		url('../../assets/images/transparent-black-80.png'),
+		url('../../assets/images/sterneagee.png');
+	.background-cover;
+	background-position: 10% 80%;
+}
+
+.name-container::after {
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #333333;
+	opacity: 0.6;
+}
+
+.settings-avatar {
+	background-image: url('../../assets/images/avatar.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}

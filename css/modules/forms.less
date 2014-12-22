@@ -1,0 +1,128 @@
+@import '../common/variables';
+
+/// ============== Forms Constants ===============
+
+@border-radius: 3px;
+@input-group-spacing: 1em;
+@white-border: 1px solid #ffffff;
+@grey-border: 1px solid #cccccc;
+
+/// ============== Default Styling ===============
+
+.form-control {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: @input-height;
+    line-height: @input-height;
+    border: 1px solid @light-grey;
+    .border-radius(@border-radius);
+    background-color: #ffffff;
+    outline: 0;
+    color: @grey;
+    transition: color 300ms linear;
+}
+
+.form-control-block {
+    display: block;
+    width: 100%;
+}
+
+/// ============== Form Icons ===============
+
+.form-icon {
+    position: absolute;
+    z-index: 10;
+    left: 0.7em;
+    bottom: @input-height / 2;
+    color: @light-grey;
+    -webkit-transition: color 300ms linear;
+}
+
+.form-icon.fa.fa-2x {
+    padding-top: 12px;
+}
+
+.form-control-with-icon {
+    padding-left: 2.7em;
+}
+
+.form-control:focus + .form-icon  {
+    color: @grey;
+}
+
+/// ============== Form Labels ===============
+
+.form-control-label {
+    display: block;
+    padding: 0.5em 0;
+    color: @grey;
+}
+
+/// ============== Form Groups ===============
+
+.input-group {
+    position: relative;
+    padding: @input-group-spacing 0;
+}
+
+/// ============== Form Containers ===============
+
+.auth-container {
+    max-width: 22em;
+    width: 85%;
+    margin: 0 auto;
+}
+
+/// ============== Default Styling ==============
+
+// Placeholder Styling for all form elements
+
+.form-control::-webkit-input-placeholder { /* WebKit browsers */
+    color: @light-grey;
+    line-height: @input-height;
+    -webkit-transition: color 300ms linear;
+}
+.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: @light-grey;
+    line-height: @input-height;
+    -webkit-transition: color 300ms linear;
+}
+.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: @light-grey;
+    line-height: @input-height;
+    -webkit-transition: color 300ms linear;
+}
+
+.form-control:focus::-webkit-input-placeholder { /* WebKit browsers */
+    color: @grey;
+}
+.form-control:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: @grey;
+}
+.form-control:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: @grey;
+}
+
+input, input[type="search"] {
+    font-size: @base-font-size;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+textarea {
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+

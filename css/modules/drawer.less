@@ -1,0 +1,84 @@
+/// ============ Drawer Constants ============
+
+@drawer-grey: #504F55;
+@drawer-item-selected: #565659;
+@drawer-item-border-top: #595959;
+@drawer-item-border-bottom: #3E4045;
+@logo-scale: 0.74;
+
+/// ============ Drawer Menu ============
+
+.drawer-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.drawer-menu > li {
+    position: relative;
+    height: @navbar-height;
+    line-height: @navbar-height;
+    padding-left: 1.25em;
+    border-top: 1px solid @drawer-item-border-top;
+    border-bottom: 1px solid @drawer-item-border-bottom;
+    color: #BFBDC7;
+}
+
+/// ============ Drawer Item States ============
+
+.drawer-menu > li:active,
+.drawer-menu > li.active {
+    background-color: @drawer-item-selected;
+}
+
+.drawer-menu > li.selected {
+    border-top-color: @grey;
+    border-width: 2px;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.10);
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.10);
+    color: #ffffff;
+}
+
+.drawer-menu > li.selected::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    height: calc(100% + 6px);
+    width: 6px;
+    background-color: @green;
+    border-top: 2px solid #F98660;
+    border-bottom: 1px solid #AB4927;
+}
+
+.drawer-menu > li.selected + li {
+    border-top: none;
+}
+
+/// ============ Drawer Accessories ============
+
+.drawer-menu > li.drawer-item-logo {
+    text-align: center;
+    background-color: #49474B;
+}
+
+.drawer-logo {
+    position: relative;
+    left: -5%;
+    margin-top: @navbar-height * (1-@logo-scale)/2;
+    height: @navbar-height * @logo-scale;
+}
+
+.drawer-item-icon {
+    position: absolute;
+    right: 1em;
+    top: 0.75em;
+    color: #77787C;
+}
+
+/// ============ plat-drawer Overrides ============
+
+.plat-drawer {
+    background-color: @drawer-grey;
+}

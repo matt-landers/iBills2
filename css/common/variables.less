@@ -1,0 +1,45 @@
+/// Sizes, Measurements, etc.
+
+@navbar-height: 3.2em;
+@input-height: @navbar-height;
+@button-height: @navbar-height;
+@horizontal-container: 3%;
+@border-radius: 4px;
+
+/// Colors
+
+@background-grey: #f4f4f4;
+@light-grey: #e7e7e7;
+@grey: #aaaaaa;
+@dark-grey: #666666;
+@light-green: #d6fceb;
+@green: #85ccb2;
+@green-offset: #76b29a;
+@green-offset-2: #56997d;
+@blue: #2d97d2;
+@red: #ee5430;
+
+/// Fonts
+
+@base-font-size: 16px;
+
+/// Mixins
+
+.background-cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.flexbox {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.backface-visibility {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}

@@ -1,0 +1,27 @@
+@import '../common/variables';
+
+/// ============ Avatar Constants ===========
+
+@avatar-size: 3em;
+@avatar-lg: 6em;
+
+/// ============ Avatar Constants ===========
+
+.avatar {
+	display: inline-block;
+	height: @avatar-size;
+	width: @avatar-size;
+	.background-cover;
+	.border-radius(@avatar-size/2);
+	border: 2px solid white;
+}
+
+.avatar.avatar-lg {
+	height: @avatar-lg;
+	width: @avatar-lg;
+	.border-radius(@avatar-lg/2);
+}
+
+.avatar-square {
+	.border-radius(0);
+}

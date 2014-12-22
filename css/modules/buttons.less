@@ -1,0 +1,61 @@
+@import '../common/variables';
+
+/// ============ Button Defaults ============
+
+.btn {
+    display: block;
+    margin: 0;
+    height: @button-height;
+    line-height: @button-height;
+    border: none;
+    .border-radius(@border-radius);
+    font-size: @base-font-size;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.btn:hover,
+.btn.hover,
+.btn:focus,
+.btn:active,
+.btn.active {
+    color: #ffffff;
+    opacity: 0.9em;
+}
+
+/// ============ Button Types ============
+
+/// PRIMARY: To be used for navigation, form submissions, etc.
+
+.btn.btn-primary {
+    background-color: @green;
+    border-top: none;
+}
+
+/// DEFAULT: Used as a backup to Primary
+
+.btn.btn-default {
+    background-color: @blue;
+}
+
+/// ============ Button Types ============
+
+.btn-block {
+    width: 100%;
+    display: block;
+}
+
+.btn-lg {
+    width: 15em;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/// ============ Button Spacers ============
+
+.btn-margin {
+    margin: 1em auto;
+}

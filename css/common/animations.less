@@ -1,0 +1,112 @@
+/// ============== Flipper ===============
+
+.flip-container {
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	-o-perspective: 1000;
+	perspective: 1000;
+	z-index: 4;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+.flip-container.flip .flipper {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.front, .back {
+	width: 100%;
+	height: 100%;
+	.flexbox();
+	justify-content: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	-webkit-align-items: center;
+	.backface-visibility();
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.flipper {
+	-webkit-transition: 0.8s;
+	-moz-transition: 0.8s;
+	-ms-transition: 0.8s;
+	-o-transition: 0.8s;
+	transition: 0.8s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.front {
+	z-index: 10;
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+
+.back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+/// ============= 3D Circular Scale ==============
+
+.flip-container.avatar-flip {
+	height: 150px;
+	width: 150px;
+	margin: 0 auto;
+}
+
+.circle {
+	height: 100%;
+	width: 100%;
+	border-radius: 100px;
+	border: 6px solid #ffffff;
+	background-color: #ffffff;
+	.backface-visibility();
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+	color: @dark-grey;
+}
+
+.chooser {
+	border-color: white;
+	height: 50%;
+	padding-top: 20%;
+	width: 100%;
+	background-color: #d6d6d6;
+	text-align: center;
+}
+
+.chooser-top {
+	border-bottom: 3px solid white;
+	border-top-left-radius: 75px;
+	border-top-right-radius: 75px;
+}
+
+.chooser-bottom {
+	padding-top: 12%;
+	border-top: 3px solid white;
+	border-bottom-left-radius: 75px;
+	border-bottom-right-radius: 75px;
+}
