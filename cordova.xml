@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="kickacestudios.ibills2.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>iBills2</name>
+    <description>
+        Bill tracking app
+    </description>
+    <author email="matt@kickacestudios.com" href="http://kickacestudios.com">
+        Matt Landers
+    </author>
+
+    <preference name="Orientation" value="portrait" />
+    <preference name="fullscreen" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="KeyboardShrinksView" value="false" />
+    <preference name="SplashScreenDelay" value="2000" />
+    <preference name="SplashScreen" value="splash" />
+    <preference name="StatusBarOverlaysWebView" value="false"/>
+    <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
+    <preference name="fullscreen" value="false" />
+
+    <content src="index.html" />
+    <access origin="*" />
+</widget>

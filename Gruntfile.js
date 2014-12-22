@@ -2,7 +2,8 @@ var DEBUG = true;
 module.exports = function(grunt) {
     var files = [
             './**/*.ts',
-            '!./node_modules/**/*'
+            '!./node_modules/**/*',
+            '!./ibills2/**/*'
         ],
         cordovaId = 'com.kickacestudios.ibills2',
         cordovaName = 'IBills2';
@@ -17,7 +18,8 @@ module.exports = function(grunt) {
                     commondir: true,
                     browserifyOptions: {
                         debug: DEBUG
-                    }
+                    },
+                    ignore: './ibills2/**/*'
                 }
             }
         },
@@ -56,18 +58,16 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     src: [
-                        './assets/images/**/*.png',
-                        './assets/images/**/*.jpg',
-                        './assets/icons/**/*.png',
-                        './lib/**/*.*',
+                        './images/**/*',
+                        './lib/**/*',
                         './app.js',
-                        './app/injectables/**/*.html',
-                        './app/viewcontrols/**/*.html',
-                        './css/deploy.css'
+                        './injectables/**/*',
+                        './viewcontrols/**/*',
+                        './css/main.css'
                     ],
                     dest: './ibills2/www'
                 }, {
-                    src: 'index.html',
+                    src: 'deploy.html',
                     dest: './ibills2/www/index.html'
                 }, {
                     src: 'cordova.xml',
@@ -76,18 +76,19 @@ module.exports = function(grunt) {
             }
         },
         cordovacli: {
-            addPlatforms: {
+            add_platforms: {
                 options: {
                     command: 'platform',
                     action: 'add',
                     platforms: ['ios']
                 }
             },
-            addPlugins: {
+            add_plugins: {
                 options: {
                     command: 'plugin',
                     action: 'add',
                     plugins: [
+                        'device',
                         'inappbrowser',
                         'network-information',
                         'splashscreen',
@@ -238,17 +239,14 @@ module.exports = function(grunt) {
     grunt.registerTask('install', ['shell:bower_install', 'clean:tsd_before', 'shell:add_plugins', 'clean:tsd_after', 'shell:update_typings']);
     grunt.registerTask('build', ['less', 'ts', 'browserify']);
     grunt.registerTask('cordova', [
-        'bundle',
-        'ts:build',
+        'ts',
         'less',
-        'cssmin',
-        'uglify',
         'clean:cordova',
-        'cordovacli:create',
+        //'cordovacli:create',
         'copy:www',
         'clean:build',
-        'cordovacli:add_platforms',
-        'cordovacli:add_plugins',
+        //'cordovacli:add_platforms',
+        //'cordovacli:add_plugins',
         'cordovacli:build_ios'
     ]);
     grunt.registerTask('default', ['connect', 'open', 'watch']);

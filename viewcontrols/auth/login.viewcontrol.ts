@@ -10,7 +10,7 @@ export class LoginViewControl extends BaseViewControl {
         title: 'iBills Login'
     };
     client: any;
-    constructor(azure: AzureMobileServices){
+    constructor(azure: AzureMobileServices, public browser: plat.web.IBrowser, public bc: plat.web.IBrowserConfig){
     	super();
     	this.client = azure.client;
     }
@@ -29,4 +29,7 @@ export class LoginViewControl extends BaseViewControl {
     }
 }
 
-plat.register.viewControl('loginViewControl', LoginViewControl, [AzureMobileServices], ['/']);
+plat.register.viewControl('loginViewControl', 
+    LoginViewControl, 
+    [AzureMobileServices], 
+    ['']);
