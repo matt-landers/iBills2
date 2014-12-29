@@ -1,51 +1,43 @@
-.auth-container {
-    padding: 0 30%;
+.logo-container {
+    .flexbox();
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+    top: -@navbar-height;
+    height: 40%;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid @light-grey;
+    z-index: 6;
 }
 
-.auth {
-    max-width: 500px;
+.flex-direction-column {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.login-container {
+    position: relative;
+    height: 40%;
+    top: -@navbar-height / 2;
+}
+
+.disclaimer {
+    display: block;
+    position: absolute;
+    bottom: -@navbar-height / 2;
+    left: 0;
+    right: 0;
+    padding: 0.1em 3em;
+    color: @grey;
+    font-size: 0.7em;
     text-align: center;
-    margin: 9em auto;
-    padding: 3em 5em;
-    background-color: #ffffff;
-    border-bottom: 3px solid #dddddd;
-
-    .auth-actions {
-        height: 3em; line-height: 3em;
-
-        a {
-            font-weight: normal;
-        }
-    }
-
-    .auth-social {
-        margin: 2em auto;
-        text-align: center;
-
-        li {
-            float: left;
-            list-style-type: none;
-        }
-
-        img {
-            width: 3.3em;
-            margin-left: 1em;
-        }
-    }
-
-    .auth-local {
-
-        .alert {
-            padding: 0.5em;
-        }
-
-        li {
-            text-align: left;
-            list-style-type: square;
-        }
-    }
-
-    .auth-separator {
-        margin: 1.5em 0;
-    }
+}
+.login-button {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

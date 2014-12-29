@@ -2,11 +2,12 @@
 	<injectable alias="moment">moment</injectable>
 </plat-resources>
 <div>
-	<h1>Bills</h1>
 	<ul class="bills" plat-control="plat-foreach" plat-context="bills">
 		<li class="billitem" plat-tap="paybill(id)">
+			<div class="bill-icon">
+				<img plat-src="./images/{{billtype}}.png" alt="" class="">
+			</div>
 			<span class="name">{{name}}</span>
-			<span class="type">{{billtype}}</span>
 			<span class="duedate">{{ @moment.formatDate(nextduedate, "MM-DD-YYYY") }}</span>
 		</li>
 	</ul>

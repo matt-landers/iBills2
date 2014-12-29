@@ -16,5 +16,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "fontawesome": "~4.2.0"
+  }
 }

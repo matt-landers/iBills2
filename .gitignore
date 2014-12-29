@@ -1,5 +1,6 @@
 node_modules/
 ibills2/
+lib/fontawesome/
 *.sublime-workspace
 *.sublime-project
 *.js

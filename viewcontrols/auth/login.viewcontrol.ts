@@ -10,12 +10,14 @@ export class LoginViewControl extends BaseViewControl {
         title: 'iBills Login'
     };
     client: any;
+    navbar = {
+        visible: false
+    };
     constructor(azure: AzureMobileServices, public browser: plat.web.IBrowser, public bc: plat.web.IBrowserConfig){
     	super();
     	this.client = azure.client;
     }
     loaded() {
-    	console.log('login loaded');
     }
     login() {
 		this.client.login("facebook").then(
@@ -32,4 +34,5 @@ export class LoginViewControl extends BaseViewControl {
 plat.register.viewControl('loginViewControl', 
     LoginViewControl, 
     [AzureMobileServices], 
-    ['']);
+    ['']
+);

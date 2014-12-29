@@ -11,6 +11,12 @@ export class BillsViewControl extends BaseViewControl {
     };
     client: any;
     bills: any;
+    navbar = {
+        visible: true,
+        title: 'Bills',
+        toggleMenu: true,
+        rightActionIcon: 'fa-plus'
+    };
     constructor(azure: AzureMobileServices, public utils: plat.IUtils){
         super();
         this.client = azure.client;

@@ -1,0 +1,15 @@
+<plat-drawer plat-options="{ useContext: true }" plat-bind="visible">
+    <ul class="drawer-menu">
+        <li class="drawer-item-logo">
+        	<img src="" alt="iBills" class="drawer-logo">
+        </li>
+    </ul>
+	<ul class="drawer-menu">
+		<li plat-tap="dispatchNavigation('bills')">Bills
+			<i class="drawer-item-icon fa fa-angle-right fa-lg"></i>
+		</li>
+		<li plat-tap="dispatchNavigation('/')">Log Out
+			<i class="drawer-item-icon fa fa-angle-right fa-lg"></i>
+		</li>
+	</ul>
+</plat-drawer>
