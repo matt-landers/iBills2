@@ -25,6 +25,9 @@ export class BillsViewControl extends BaseViewControl {
         this.bills = this.client.getTable('bills');
         this.refreshBills();
     }
+    loaded(){
+        super.loaded();
+    }
     navigatedTo(){
         this.refreshBills();
     }

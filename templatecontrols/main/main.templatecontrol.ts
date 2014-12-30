@@ -28,7 +28,9 @@ export class Main extends BaseTemplateControl {
 	setNavbarContext(details: INavbarContext) {
 		this.context.navbar = details;
 	}
-
+	back(){
+		this.viewcontrol.back();
+	}
 	rightNavAction() {
 		this.viewcontrol.rightNavAction();
 	}

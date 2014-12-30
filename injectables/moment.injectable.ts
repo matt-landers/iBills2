@@ -6,6 +6,17 @@ export class Moment {
     formatDate(datetime: string, format: string) {
         return moment(datetime).format(format);
     }
+    getBillUrgency(datetime: string){
+    	var nextduedate = moment(datetime);
+    	var days = nextduedate.diff(Date.now(), 'days');
+    	if(days <= 0){
+    		return 'due';
+    	} else if(days <= 7) {
+    		return 'soon';
+    	} else {
+    		return 'paid';
+    	}
+    }
 }
 
 plat.register.injectable('moment', Moment);

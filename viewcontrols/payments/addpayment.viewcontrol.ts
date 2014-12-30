@@ -12,6 +12,13 @@ export class AddPaymentViewControl extends BaseViewControl {
         datepaid: moment().format('MM-DD-YYYY'),
         nextduedate: moment().add(1, 'month').format('MM-DD-YYYY')
     };
+    navbar = {
+        visible: true,
+        title: 'Add Payment',
+        toggleMenu: false,
+        backButton: true,
+        rightActionIcon: 'fa-save'
+    };
     client: any;
     payments: any;
     bills: any;
@@ -25,10 +32,13 @@ export class AddPaymentViewControl extends BaseViewControl {
         this.bills = this.client.getTable('bills');
     }
     loaded() {
-
+        super.loaded();
     }
     navigatedTo(route: plat.web.IRoute<{ id: number; }>){
         this.billid = route.parameters.id;
+    }
+    rightNavAction(){
+        this.addpayment();
     }
     addpayment(){
         this.payments.insert(

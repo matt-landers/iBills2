@@ -9,7 +9,6 @@ class BaseViewControl extends plat.ui.WebViewControl {
 	navbar: INavbarContext;
     mainControl: maintc.Main;
     drawerNavigationRemover: plat.IRemoveListener = () => {};
-
     loaded(){
     	this.mainControl = <maintc.Main>this.root.parent.parent;
         this.setNavbarContext();
@@ -19,21 +18,18 @@ class BaseViewControl extends plat.ui.WebViewControl {
         var navbar = this.$utils.clone(this.navbar, true);
         this.mainControl.setNavbarContext(navbar);
     }
-
     setDrawerNavigation() {
         this.drawerNavigationRemover();
         this.drawerNavigationRemover = this.on('drawerNavigation', (ev: plat.events.IDispatchEventInstance, params) => {
             this.navigator.navigate(params.view);
         });
     }
-
     back() {
+    	console.log('back clicked');
         this.navigator.goBack();
     }
-
     rightNavAction() {}
     leftNavAction() {}
-
     setTemplate() {
         setTimeout(() => {
             this.window.scrollTo(null, 0);

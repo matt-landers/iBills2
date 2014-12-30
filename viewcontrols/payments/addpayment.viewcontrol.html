@@ -1,12 +1,38 @@
-<div>
-	<span>amount:</span>
-	<input type="text" plat-bind="amount">
-	<br>
-	<span>payment date</span>
-	<input type="text" plat-bind="datepaid">
-	<br>
-	<span>next due date</span>
-	<input type="text" plat-bind="nextduedate">
-	<br>
-	<button plat-tap="addpayment()">Add Payment</button>
-</div>
+<ul class="listview">
+    <li>
+        <div class="container-horizontal">
+            <div class="listview-detail-container listview-detail-no-image">
+                <div class="listview-detail cf">
+                    <div class="float-left">Amount</div>
+                    <div class="float-right">
+                        <input type="text" class="listview-input" plat-bind="amount">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="container-horizontal">
+            <div class="listview-detail-container listview-detail-no-image">
+                <div class="listview-detail cf">
+                    <div class="float-left">Payment Date</div>
+                    <div class="float-right">
+                        <input type="text" class="listview-input" plat-bind="datepaid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="container-horizontal">
+            <div class="listview-detail-container listview-detail-no-image">
+                <div class="listview-detail cf">
+                    <div class="float-left">Next Due Date</div>
+                    <div class="float-right">
+                        <input type="text" class="listview-input" plat-bind="nextduedate">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

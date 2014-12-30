@@ -1,12 +1,20 @@
 .bill-icon {
-	display: inline-block;
-	padding: 0px;
-	margin: 0px;
-	background-color: lightblue;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    &.due {
+        background-color: tomato;
+    }
+    &.soon {
+        background-color: orange;
+    }
+    &.paid {
+        background-color: limegreen;
+    }
 }
 .bill-icon img {
-	height: 50px;
+    height: 50px;
 }
 .bills li {
-	list-style-type: none;
+    list-style-type: none;
 }
