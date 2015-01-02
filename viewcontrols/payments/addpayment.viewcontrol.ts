@@ -45,12 +45,12 @@ export class AddPaymentViewControl extends BaseViewControl {
             { 
                 billid: this.billid,
                 amountpaid: this.context.amount,
-                datepaid: this.context.datepaid
+                datepaid: new Date(this.context.datepaid)
             }).then(() => {
                 this.bills.update(
                     {
                         id: this.billid, 
-                        nextduedate: this.context.nextduedate 
+                        nextduedate: new Date(this.context.nextduedate) 
                     })
             }).then(() => {
                 this.navigator.goBack();

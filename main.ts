@@ -25,3 +25,4 @@ require('./viewcontrols/base/base.viewcontrol');
 require('./viewcontrols/auth/login.viewcontrol');
 require('./viewcontrols/bills/bills.viewcontrol');
 require('./viewcontrols/payments/addpayment.viewcontrol');
+require('./viewcontrols/addbill/addbill.viewcontrol');

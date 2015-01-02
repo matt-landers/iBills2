@@ -14,9 +14,9 @@
     <preference name="KeyboardShrinksView" value="false" />
     <preference name="SplashScreenDelay" value="2000" />
     <preference name="SplashScreen" value="splash" />
-    <preference name="StatusBarOverlaysWebView" value="false"/>
+    <preference name="StatusBarOverlaysWebView" value="true"/>
     <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
-    <preference name="fullscreen" value="false" />
+    <preference name="fullscreen" value="true" />
 
     <content src="index.html" />
     <access origin="*" />

@@ -18,6 +18,7 @@ export class LoginViewControl extends BaseViewControl {
     	this.client = azure.client;
     }
     loaded() {
+        super.loaded();
     }
     login() {
 		this.client.login("facebook").then(

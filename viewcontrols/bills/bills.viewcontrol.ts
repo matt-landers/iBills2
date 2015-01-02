@@ -23,13 +23,15 @@ export class BillsViewControl extends BaseViewControl {
     }
     initialize() {
         this.bills = this.client.getTable('bills');
-        this.refreshBills();
     }
     loaded(){
         super.loaded();
     }
     navigatedTo(){
         this.refreshBills();
+    }
+    rightNavAction(){
+        this.navigator.navigate('/bills/add');
     }
     refreshBills(){
         this.bills.read().then((bills)=>{
@@ -42,6 +44,7 @@ export class BillsViewControl extends BaseViewControl {
                 }
                 return 0;
                 });
+            console.log(bills);
             this.context.bills = bills;
         });
     }

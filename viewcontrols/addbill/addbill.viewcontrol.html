@@ -1,0 +1,50 @@
+<ul class="listview">
+    <li>
+        <div class="container-horizontal">
+            <div class="listview-detail-container listview-detail-no-image">
+                <div class="listview-detail cf">
+                    <div class="float-left">Name</div>
+                    <div class="float-right">
+                        <input type="text" class="listview-input" plat-bind="name">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="container-horizontal">
+            <div class="listview-detail-container listview-detail-no-image">
+                <div class="listview-detail cf">
+                    <div class="float-left">Next Due Date</div>
+                    <div class="float-right">
+                        <input type="text" class="listview-input" plat-bind="nextduedate">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="container-horizontal">
+            <div class="listview-detail-container listview-detail-no-image">
+                <div class="listview-detail cf" plat-tap="showBillTypeModal()">
+                <div class="float-left listview-detail-center-image">
+                    <img plat-src="./images/{{billtype}}.png" class="billtype-icon" alt="">
+                </div>
+                    
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+<plat-modal plat-name="modalBillType" plat-options="{ transition: 'up' }" plat-bind="showBillTypes">
+    <div class="billtypes-header">
+        <div class="billtypes-close" plat-tap="hideBillTypeModal()">
+            <i class="fa fa-close"></i>
+        </div>    
+    </div>
+    <div class="billtypes">
+        <div plat-control="plat-foreach" plat-context="billtypes">
+            <img plat-src="./images/{{@context}}.png" alt="" class="billtype-icon big" plat-tap="hideBillTypeModal(@context)">
+        </div>
+    </div>
+</plat-modal>

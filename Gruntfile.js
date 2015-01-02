@@ -63,7 +63,8 @@ module.exports = function(grunt) {
                         './app.js',
                         './injectables/**/*',
                         './viewcontrols/**/*',
-                        './css/main.css'
+                        './css/main.css',
+                        './templatecontrols/**/*'
                     ],
                     dest: './ibills2/www'
                 }, {
@@ -195,7 +196,7 @@ module.exports = function(grunt) {
         },
         watch: {
             less: {
-                files: ['css/**/*.less'],
+                files: ['css/**/*.less', 'viewcontrols/**/*.less'],
                 tasks: ['less']
             },
             ts: {

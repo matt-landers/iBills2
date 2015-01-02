@@ -12,10 +12,15 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="cordova.js"></script>
     <script src="cordova_plugins.js"></script>
+    <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
     <script src="lib/AMS/MobileServices.Web.min.js"></script>
 </head>
 <body>
-    <plat-routeport></plat-routeport>
+    <main class="main">
+        <navbar class="ibills-navbar" plat-visible="{{navbar.visible}}"></navbar>
+        <plat-routeport></plat-routeport>
+    </main>
+    <drawer plat-hide=""></drawer>
     <script src="app.js"></script>
 </body>
 </html>
