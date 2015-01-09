@@ -28,7 +28,6 @@ class AddBillViewControl extends BaseViewControl {
         console.log('addbill initialize');
     }
     loaded() {
-        super.loaded();
         console.log('addbill loaded');
     }
     navigatedTo(){

@@ -4,16 +4,6 @@ import plat = require('platypus');
 class BaseViewControl extends plat.ui.ViewControl {
     window = plat.acquire(plat.Window);
 	$utils = plat.acquire(plat.IUtils);
-    drawerNavigationRemover: plat.IRemoveListener = () => {};
-    loaded(){
-        this.setDrawerNavigation();
-    }
-    setDrawerNavigation() {
-        this.drawerNavigationRemover();
-        this.drawerNavigationRemover = this.on('drawerNavigation', (ev: plat.events.IDispatchEventInstance, params) => {
-            this.navigator.navigate(params.view);
-        });
-    }
     setTemplate() {
         setTimeout(() => {
             this.window.scrollTo(null, 0);

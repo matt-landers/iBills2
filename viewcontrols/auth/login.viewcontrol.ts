@@ -19,9 +19,6 @@ class LoginViewControl extends BaseViewControl {
     navigatedTo(){
         this.navbar.visible(false);
     }
-    loaded() {
-        //super.loaded();
-    }
     login() {
 		this.client.login("facebook").then(
 			() => {

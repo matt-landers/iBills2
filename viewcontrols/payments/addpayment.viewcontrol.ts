@@ -26,9 +26,6 @@ class AddPaymentViewControl extends BaseViewControl {
         this.payments = this.client.getTable('payments');
         this.bills = this.client.getTable('bills');
     }
-    loaded() {
-        super.loaded();
-    }
     navigatedTo(parameters: { id: number; }){
         console.log('addpayment navigatedto');
         this.billid = parameters.id;

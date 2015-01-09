@@ -8,12 +8,15 @@ class Drawer extends BaseTemplateControl {
 	context = {
 		visible: false
 	};
-
-	dispatchNavigation(view: string) {
+    
+    constructor(public navigator: plat.routing.Navigator) {
+        super();
+    }
+    
+	navigate(view: string) {
 		this.context.visible = false;
-		this.dispatchEvent('drawerNavigation', plat.events.EventManager.DIRECT, {
-			view: view
-		});
+        console.log(view);
+        this.navigator.navigate(view);
 	}
 }
 
@@ -23,4 +26,4 @@ interface IDrawerContext {
 
 export = Drawer;
 
-plat.register.control('drawer', Drawer, null, true);
+plat.register.control('drawer', Drawer, [plat.routing.INavigatorInstance], true);

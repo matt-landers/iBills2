@@ -21,9 +21,6 @@ class BillsViewControl extends BaseViewControl {
     initialize() {
         this.bills = this.client.getTable('bills');
     }
-    loaded(){
-        super.loaded();
-    }
     navigatedTo(){
         console.log('bills nto');
         this.navbar.visible(true);
