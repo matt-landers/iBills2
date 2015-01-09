@@ -2,7 +2,7 @@
 import plat = require('platypus');
 import BaseTemplateControl = require('../base.templatecontrol');
 
-export class Drawer extends BaseTemplateControl {
+class Drawer extends BaseTemplateControl {
 	templateUrl = 'templatecontrols/drawer/drawer.templatecontrol.html';
 
 	context = {
@@ -17,8 +17,10 @@ export class Drawer extends BaseTemplateControl {
 	}
 }
 
-export interface IDrawerContext {
+interface IDrawerContext {
 	visible: boolean;
 }
 
-plat.register.control('drawer', Drawer);
+export = Drawer;
+
+plat.register.control('drawer', Drawer, null, true);

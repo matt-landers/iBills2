@@ -18,7 +18,6 @@ require('./injectables/moment.injectable');
 // template controls
 require('./templatecontrols/base.templatecontrol');
 require('./templatecontrols/drawer/drawer.templatecontrol');
-require('./templatecontrols/main/main.templatecontrol');
 require('./templatecontrols/navbar/navbar.templatecontrol');
 // app view controls
 require('./viewcontrols/base/base.viewcontrol');

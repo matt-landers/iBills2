@@ -1,7 +1,8 @@
 /// <reference path="../../references.d.ts" />
 import plat = require('platypus');
 import BaseViewControl = require('../base/base.viewcontrol');
-import AzureMobileServices = require('../../injectables/azurems.injectable')
+import AzureMobileServices = require('../../injectables/azurems.injectable');
+import Navbar = require('../../templatecontrols/navbar/navbar.templatecontrol');
 
 export class BillsViewControl extends BaseViewControl {
     templateUrl = './viewcontrols/bills/bills.viewcontrol.html';
@@ -11,13 +12,7 @@ export class BillsViewControl extends BaseViewControl {
     };
     client: any;
     bills: any;
-    navbar = {
-        visible: true,
-        title: 'Bills',
-        toggleMenu: true,
-        rightActionIcon: 'fa-plus'
-    };
-    constructor(azure: AzureMobileServices, public utils: plat.IUtils){
+    constructor(azure: AzureMobileServices, public utils: plat.IUtils, public navbar: Navbar){
         super();
         this.client = azure.client;
     }
@@ -28,6 +23,12 @@ export class BillsViewControl extends BaseViewControl {
         super.loaded();
     }
     navigatedTo(){
+        console.log('bills nto');
+        this.navbar.visible(true);
+        this.navbar.title('Bills');
+        this.navbar.showDrawer(true);
+        this.navbar.rightActionIcon('fa-plus');
+        this.navbar.rightNavAction2 = this.rightNavAction.bind(this);
         this.refreshBills();
     }
     rightNavAction(){
@@ -44,7 +45,6 @@ export class BillsViewControl extends BaseViewControl {
                 }
                 return 0;
                 });
-            console.log(bills);
             this.context.bills = bills;
         });
     }
@@ -53,4 +53,4 @@ export class BillsViewControl extends BaseViewControl {
     }
 }
 
-plat.register.viewControl('billsViewControl', BillsViewControl, [AzureMobileServices, plat.IUtils], ['/bills']);
+plat.register.viewControl('billsViewControl', BillsViewControl, [AzureMobileServices, plat.IUtils, Navbar], ['/bills']);

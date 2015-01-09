@@ -1,14 +1,16 @@
-<div class="container-horizontal">
-	<div class="navbar-action navbar-action-left" plat-visible="{{!navbar.toggleMenu}}" plat-tap="back()">
-		<i class="fa fa-arrow-left" plat-visible="{{!!navbar.backButton}}"></i>
-	</div>
-	<plat-drawer-controller class="navbar-action navbar-action-left" plat-visible="{{!!navbar.toggleMenu}}" plat-tap="toggleDrawer()">
-		<i class="fa fa-navicon fa-lg"></i>
-	</plat-drawer-controller>
-	<span class="navbar-title">{{navbar.title}}</span>
-	<span class="navbar-title navbar-title-top" plat-visible="{{!!navbar.titleTop}}">{{navbar.titleTop}}</span>
-	<span class="navbar-title navbar-title-bottom" plat-visible="{{!!navbar.titleBottom}}">{{navbar.titleBottom}}</span>
-	<div class="navbar-action navbar-action-right" plat-tap="rightNavAction">
-		<i class="fa {{navbar.rightActionIcon}} fa-lg" plat-visible="{{!!navbar.rightActionIcon}}"></i>
-	</div>
+<div class="ibills-navbar" plat-visible="{{visible}}">
+    <div class="container-horizontal">
+        <div class="navbar-action navbar-action-left" plat-visible="{{!showDrawer}}" plat-tap="leftNavAction()">
+            <i class="fa fa-arrow-left"></i>
+        </div>
+        <plat-drawer-controller class="navbar-action navbar-action-left" plat-visible="{{!!showDrawer}}">
+            <i class="fa fa-navicon fa-lg"></i>
+        </plat-drawer-controller>
+        <span class="navbar-title">{{title}}</span>
+        <span class="navbar-title navbar-title-top" plat-visible="{{!!titleTop}}">{{titleTop}}</span>
+        <span class="navbar-title navbar-title-bottom" plat-visible="{{!!titleBottom}}">{{titleBottom}}</span>
+        <div class="navbar-action navbar-action-right" plat-tap="rightNavAction">
+            <i class="fa {{rightActionIcon}} fa-lg" plat-visible="{{!!rightActionIcon}}"></i>
+        </div>
+    </div>
 </div>

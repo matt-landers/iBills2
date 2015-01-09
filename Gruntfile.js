@@ -183,14 +183,16 @@ module.exports = function(grunt) {
                 src: files,
                 options: {
                     module: 'commonjs',
-                    target: 'es5'
+                    target: 'es5',
+                    fast: 'always'
                 }
             },
             build: {
                 src: ['./main.ts'],
                 options: {
                     module: 'commonjs',
-                    target: 'es5'
+                    target: 'es5',
+                    fast: 'always'
                 }
             }
         },

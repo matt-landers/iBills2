@@ -2,9 +2,40 @@
 import plat = require('platypus');
 import BaseTemplateControl = require('../base.templatecontrol');
 
-export class Navbar extends BaseTemplateControl {
+class Navbar extends BaseTemplateControl {
 	templateUrl = 'templatecontrols/navbar/navbar.templatecontrol.html';
 	replaceWith = 'nav';
+	hasOwnContext = true;
+	context: interfaces.INavbarContext  = {
+		visible: false,
+		title: '',
+		rightActionIcon: '',
+		showDrawer: false
+	};
+	constructor(public navigator: plat.navigation.IRoutingNavigator){
+		super();
+	}
+	visible(show: boolean){
+		this.context.visible = show;
+	}
+	title(title: string){
+		this.context.title = title;
+	}
+	showDrawer(show: boolean){
+		this.context.showDrawer = show;
+	}
+	rightActionIcon(icon: string){
+		this.context.rightActionIcon = icon;
+	}
+	leftNavAction(){
+		this.navigator.goBack();
+	}
+	rightNavAction(){
+		this.rightNavAction2();
+	}
+	rightNavAction2(){}
 }
 
-plat.register.control('navbar', Navbar);
+export = Navbar;
+
+plat.register.control('navbar', Navbar, [plat.navigation.IRoutingNavigator], true);

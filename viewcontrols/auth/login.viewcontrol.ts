@@ -2,6 +2,7 @@
 import plat = require('platypus');
 import BaseViewControl = require('../base/base.viewcontrol');
 import AzureMobileServices = require('../../injectables/azurems.injectable');
+import Navbar = require('../../templatecontrols/navbar/navbar.templatecontrol');
 declare var WindowsAzure: any;
 
 export class LoginViewControl extends BaseViewControl {
@@ -10,15 +11,15 @@ export class LoginViewControl extends BaseViewControl {
         title: 'iBills Login'
     };
     client: any;
-    navbar = {
-        visible: false
-    };
-    constructor(azure: AzureMobileServices, public browser: plat.web.IBrowser, public bc: plat.web.IBrowserConfig){
+    constructor(azure: AzureMobileServices, public navbar: Navbar){
     	super();
     	this.client = azure.client;
     }
+    navigatedTo(){
+        this.navbar.visible(false);
+    }
     loaded() {
-        super.loaded();
+        //super.loaded();
     }
     login() {
 		this.client.login("facebook").then(
@@ -34,6 +35,6 @@ export class LoginViewControl extends BaseViewControl {
 
 plat.register.viewControl('loginViewControl', 
     LoginViewControl, 
-    [AzureMobileServices], 
+    [AzureMobileServices, Navbar], 
     ['']
 );

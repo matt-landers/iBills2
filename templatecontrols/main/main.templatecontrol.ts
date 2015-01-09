@@ -1,12 +1,11 @@
 /// <reference path="../../references.d.ts" />
 import plat = require('platypus');
 import BaseTemplateControl = require('../base.templatecontrol');
-import INavbarContext = require('../navbar/inavbarcontext');
 
 export class Main extends BaseTemplateControl {
 	viewcontrol: any;
 	context = {
-		navbar: <INavbarContext>{},
+		navbar: <interfaces.INavbarContext>{},
 		photos: [
 			'./assets/icons/checking.png',
 			'./assets/icons/credit.png',
@@ -25,22 +24,8 @@ export class Main extends BaseTemplateControl {
 		});
 	}
 
-	setNavbarContext(details: INavbarContext) {
-		this.context.navbar = details;
-	}
-	back(){
-		this.viewcontrol.back();
-	}
-	rightNavAction() {
-		this.viewcontrol.rightNavAction();
-	}
-
-	openModal() {
-		this.createAccount.control.show();
-	}
-
-	closeModal() {
-		this.createAccount.control.show();	
+	setNavbarContext(details: interfaces.INavbarContext) {
+		//this.context.navbar = details;
 	}
 }
 
