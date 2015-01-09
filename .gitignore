@@ -8,6 +8,7 @@ lib/fontawesome/
 !lib/AMS/*
 !/lib/platypusui/*
 *.js.map
+!node_modules/platypus/*
 *.css
 *.css.map
 *.DS_Store
