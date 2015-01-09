@@ -4,11 +4,12 @@ lib/fontawesome/
 *.sublime-workspace
 *.sublime-project
 *.js
+!lib/AMS/*
+!/lib/platypusui/*
 *.js.map
 *.css
 *.css.map
 *.DS_Store
-!lib/AMS/**/*
 !gruntfile.js
 .tscache
-!typings/
+typings/
