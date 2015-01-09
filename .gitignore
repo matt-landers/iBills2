@@ -10,3 +10,4 @@ lib/fontawesome/
 *.DS_Store
 !gruntfile.js
 .tscache
+!typings/

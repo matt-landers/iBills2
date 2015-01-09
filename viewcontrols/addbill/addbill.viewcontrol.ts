@@ -56,7 +56,7 @@ export class AddBillViewControl extends BaseViewControl {
             { 
                 name: this.name,
                 billtype: this.context.billtype,
-                nextduedate: new Date(this.context.nextduedate);
+                nextduedate: new Date(this.context.nextduedate)
             }).then(() => {
                 this.navigator.goBack();
             });

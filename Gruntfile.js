@@ -2,6 +2,7 @@ var DEBUG = true;
 module.exports = function(grunt) {
     var files = [
             './**/*.ts',
+            '!./typings/**',
             '!./node_modules/**/*',
             '!./ibills2/**/*'
         ],
