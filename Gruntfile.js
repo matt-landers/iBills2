@@ -34,16 +34,6 @@ module.exports = function(grunt) {
                 'app.min.js',
                 //'app.ts'
             ],
-            tsd_before: [
-                'typings'
-            ],
-            tsd_after: [
-                'typings/.*',
-                'typings/*',
-                'typings/cordova/cordova-tests.ts',
-                '!typings/cordova',
-                '!typings/tsd.d.ts'
-            ],
             cordova: './cordova'
         },
         connect: {
@@ -153,11 +143,6 @@ module.exports = function(grunt) {
             }
         },
         shell: {
-            add_plugins: {
-                command: [
-                    'git clone https://github.com/borisyankov/DefinitelyTyped.git typings',
-                ].join(' && ')
-            },
             bower_install: {
                 command: 'bower install'
             },
@@ -194,6 +179,20 @@ module.exports = function(grunt) {
                     module: 'commonjs',
                     target: 'es5',
                     fast: 'always'
+                }
+            }
+        },
+        tsd: {
+            refresh: {
+                options: {
+                    // execute a command
+                    command: 'reinstall',
+
+                    //optional: always get from HEAD
+                    latest: true,
+
+                    // specify config file
+                    config: './tsd.json',
                 }
             }
         },
@@ -238,9 +237,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-open');
+    grunt.loadNpmTasks('grunt-tsd');
 
     // Register Tasks
-    grunt.registerTask('install', ['shell:bower_install', 'clean:tsd_before', 'shell:add_plugins', 'clean:tsd_after', 'shell:update_typings']);
+    grunt.registerTask('install', ['shell:bower_install', 'tsd']);
     grunt.registerTask('build', ['less', 'ts', 'browserify']);
     grunt.registerTask('cordova', [
         'ts',
