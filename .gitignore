@@ -13,3 +13,4 @@ lib/fontawesome/
 !gruntfile.js
 .tscache
 typings/
+!node/modules/platypus/*

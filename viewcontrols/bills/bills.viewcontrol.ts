@@ -3,8 +3,10 @@ import plat = require('platypus');
 import BaseViewControl = require('../base/base.viewcontrol');
 import AzureMobileServices = require('../../injectables/azurems.injectable');
 import Navbar = require('../../templatecontrols/navbar/navbar.templatecontrol');
+import AddBillViewControl = require('../addbill/addbill.viewcontrol');
+import AddPaymentViewControl = require('../payments/addpayment.viewcontrol');
 
-export class BillsViewControl extends BaseViewControl {
+class BillsViewControl extends BaseViewControl {
     templateUrl = './viewcontrols/bills/bills.viewcontrol.html';
     context = {
         title: 'My Bills',
@@ -32,7 +34,7 @@ export class BillsViewControl extends BaseViewControl {
         this.refreshBills();
     }
     rightNavAction(){
-        this.navigator.navigate('/bills/add');
+        this.navigator.navigate(AddBillViewControl);
     }
     refreshBills(){
         this.bills.read().then((bills)=>{
@@ -49,8 +51,14 @@ export class BillsViewControl extends BaseViewControl {
         });
     }
     paybill(id: any){
-        this.navigator.navigate('/payments/add/' + id);
+        this.navigator.navigate(AddPaymentViewControl, { 
+            parameters: {
+             id: id
+            }
+        });
     }
 }
 
-plat.register.viewControl('billsViewControl', BillsViewControl, [AzureMobileServices, plat.IUtils, Navbar], ['/bills']);
+export = BillsViewControl;
+
+plat.register.viewControl('billsViewControl', BillsViewControl, [AzureMobileServices, plat.IUtils, Navbar]);

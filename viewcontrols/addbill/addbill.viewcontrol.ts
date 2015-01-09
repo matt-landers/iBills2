@@ -5,7 +5,7 @@ import AzureMobileServices = require('../../injectables/azurems.injectable');
 import Navbar = require('../../templatecontrols/navbar/navbar.templatecontrol');
 import moment = require('moment');
 
-export class AddBillViewControl extends BaseViewControl {
+class AddBillViewControl extends BaseViewControl {
     templateUrl = './viewcontrols/addbill/addbill.viewcontrol.html';
     context = {
         title: 'Add Bill',
@@ -54,7 +54,7 @@ export class AddBillViewControl extends BaseViewControl {
     addbill(){
         this.bills.insert(
             { 
-                name: this.name,
+                name: this.context.name,
                 billtype: this.context.billtype,
                 nextduedate: new Date(this.context.nextduedate)
             }).then(() => {
@@ -63,6 +63,7 @@ export class AddBillViewControl extends BaseViewControl {
     }
 }
 
+export = AddBillViewControl;
+
 plat.register.viewControl('addbillViewControl', 
-    AddBillViewControl, [AzureMobileServices, plat.IUtils, Navbar], 
-    ['/bills/add']);
+    AddBillViewControl, [AzureMobileServices, plat.IUtils, Navbar]);

@@ -1,8 +1,7 @@
 /// <reference path="../../references.d.ts" />
 import plat = require('platypus');
-import maintc = require('../../templatecontrols/main/main.templatecontrol');
 
-class BaseViewControl extends plat.ui.WebViewControl {
+class BaseViewControl extends plat.ui.ViewControl {
     window = plat.acquire(plat.Window);
 	$utils = plat.acquire(plat.IUtils);
     drawerNavigationRemover: plat.IRemoveListener = () => {};

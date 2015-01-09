@@ -12,7 +12,7 @@ class Navbar extends BaseTemplateControl {
 		rightActionIcon: '',
 		showDrawer: false
 	};
-	constructor(public navigator: plat.navigation.IRoutingNavigator){
+	constructor(public navigator: plat.routing.Navigator){
 		super();
 	}
 	visible(show: boolean){
@@ -38,4 +38,4 @@ class Navbar extends BaseTemplateControl {
 
 export = Navbar;
 
-plat.register.control('navbar', Navbar, [plat.navigation.IRoutingNavigator], true);
+plat.register.control('navbar', Navbar, [plat.routing.INavigatorInstance], true);

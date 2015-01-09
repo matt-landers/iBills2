@@ -3,9 +3,10 @@ import plat = require('platypus');
 import BaseViewControl = require('../base/base.viewcontrol');
 import AzureMobileServices = require('../../injectables/azurems.injectable');
 import Navbar = require('../../templatecontrols/navbar/navbar.templatecontrol');
+import BillsViewControl = require('../bills/bills.viewcontrol');
 declare var WindowsAzure: any;
 
-export class LoginViewControl extends BaseViewControl {
+class LoginViewControl extends BaseViewControl {
     templateUrl = './viewcontrols/auth/login.viewcontrol.html';
     context = {
         title: 'iBills Login'
@@ -24,8 +25,8 @@ export class LoginViewControl extends BaseViewControl {
     login() {
 		this.client.login("facebook").then(
 			() => {
-				this.navigator.navigate('bills');
-			}, 
+				this.navigator.navigate(BillsViewControl);
+			},
 			function(error){
         		alert(error);
     		}
@@ -33,8 +34,9 @@ export class LoginViewControl extends BaseViewControl {
     }
 }
 
+export = LoginViewControl;
+
 plat.register.viewControl('loginViewControl', 
     LoginViewControl, 
-    [AzureMobileServices, Navbar], 
-    ['']
+    [AzureMobileServices, Navbar]
 );

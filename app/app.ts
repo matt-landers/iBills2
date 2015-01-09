@@ -1,13 +1,24 @@
 /// <reference path='../references.d.ts' />
 import plat = require('platypus');
+import LoginViewControl = require('../viewcontrols/auth/login.viewcontrol');
+import AddBillViewControl = require('../viewcontrols/addbill/addbill.viewcontrol');
+import BillsViewControl = require('../viewcontrols/bills/bills.viewcontrol');
+import AddPaymentViewControl = require('../viewcontrols/payments/addpayment.viewcontrol');
 
 class App extends plat.App {
     /**
      * Class for every app. This class contains hooks for Application Lifecycle Events
      * as well as error handling and navigation events.
      */
-    constructor() {
+    constructor(router: plat.routing.Router) {
         super();
+
+        router.configure([
+            { pattern: '', view: LoginViewControl },
+            { pattern: '/bills', view: BillsViewControl },
+            { pattern: '/bills/add', view: AddBillViewControl },
+            { pattern: '/payments/add/:id', view: AddPaymentViewControl }
+        ]);
     }
 
     /**
@@ -53,6 +64,6 @@ class App extends plat.App {
     }
 }
 
-plat.register.app('ibills', App);
+plat.register.app('ibills', App, [plat.routing.IRouter]);
 
 export = App;

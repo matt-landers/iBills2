@@ -5,7 +5,7 @@ import AzureMobileServices = require('../../injectables/azurems.injectable');
 import Navbar = require('../../templatecontrols/navbar/navbar.templatecontrol');
 import moment = require('moment');
 
-export class AddPaymentViewControl extends BaseViewControl {
+class AddPaymentViewControl extends BaseViewControl {
     templateUrl = './viewcontrols/payments/addpayment.viewcontrol.html';
     context = {
         title: 'Add Payment',
@@ -29,9 +29,9 @@ export class AddPaymentViewControl extends BaseViewControl {
     loaded() {
         super.loaded();
     }
-    navigatedTo(route: plat.web.IRoute<{ id: number; }>){
+    navigatedTo(parameters: { id: number; }){
         console.log('addpayment navigatedto');
-        this.billid = route.parameters.id;
+        this.billid = parameters.id;
         this.navbar.title('Add Payment');
         this.navbar.showDrawer(false);
         this.navbar.rightActionIcon('fa-save');
@@ -63,7 +63,8 @@ export class AddPaymentViewControl extends BaseViewControl {
     }
 }
 
+export = AddPaymentViewControl;
+
 plat.register.viewControl('addpaymentViewControl', 
     AddPaymentViewControl, 
-    [AzureMobileServices, plat.IUtils, Navbar], 
-    ['/payments/add/:id']);
+    [AzureMobileServices, plat.IUtils, Navbar]);
