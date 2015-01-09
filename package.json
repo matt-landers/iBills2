@@ -38,6 +38,6 @@
     "uri-path": "latest"
   },
   "scripts": {
-    "postinstall": "node node_modules/grunt-cli/bin/grunt install"
+    "prepublish": "node node_modules/grunt-cli/bin/grunt install"
   }
 }
