@@ -8,6 +8,7 @@ lib/fontawesome/
 *.css
 *.css.map
 *.DS_Store
+!lib/AMS/**/*
 !gruntfile.js
 .tscache
 !typings/
