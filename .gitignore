@@ -1,5 +1,4 @@
 node_modules/*
-!node_modules/platypus/
 ibills2/
 lib/fontawesome/
 *.sublime-workspace
@@ -8,7 +7,6 @@ lib/fontawesome/
 !lib/AMS/*
 !/lib/platypusui/*
 *.js.map
-!node_modules/platypus/*
 *.css
 *.css.map
 *.DS_Store

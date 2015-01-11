@@ -6,70 +6,70 @@
     "bundle": "./typings/tsd.d.ts",
     "installed": {
         "node/node.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "moment/moment.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/Camera.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/Device.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/Contacts.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/cordova.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/BatteryStatus.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/DeviceMotion.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/DeviceOrientation.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/FileTransfer.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/Dialogs.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/FileSystem.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/MediaCapture.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/Media.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/Globalization.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/Push.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/InAppBrowser.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/NetworkInformation.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/Splashscreen.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/StatusBar.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/Vibration.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         },
         "cordova/plugins/WebSQL.d.ts": {
-            "commit": "4abbdff87f05616cfc421e0bf46c54a0ffdc06ce"
+            "commit": "6ee44e03b86604f1188020a365281890140e4b9b"
         }
     }
 }
