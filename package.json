@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "connect": "^2.19.5",
-    "platypus": "^0.10.0-beta.1"
+    "platypus": "^0.10.0-beta.4"
   },
   "devDependencies": {
     "cordova": "^4.0.0",
