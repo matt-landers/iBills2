@@ -22,6 +22,7 @@ class BillsViewControl extends BaseViewControl {
         this.bills = this.client.getTable('bills');
     }
     navigatedTo(){
+        this.context.bills = [];
         console.log('bills nto');
         this.navbar.visible(true);
         this.navbar.title('Bills');

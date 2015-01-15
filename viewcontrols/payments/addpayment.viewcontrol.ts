@@ -42,19 +42,21 @@ class AddPaymentViewControl extends BaseViewControl {
         this.addpayment();
     }
     addpayment(){
-        console.log('ADD PAYMENT');
+        alert('adding payment');
         this.payments.insert(
             { 
                 billid: this.billid,
                 amountpaid: this.context.amount,
                 datepaid: new Date(this.context.datepaid)
             }).then(() => {
+                alert('payment added updating bill');
                 this.bills.update(
                     {
                         id: this.billid, 
                         nextduedate: new Date(this.context.nextduedate) 
                     })
             }).then(() => {
+                alert('bill updated.  nagivating back');
                 this.navigator.goBack();
             });
     }

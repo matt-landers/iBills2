@@ -1,8 +1,8 @@
 <plat-resources>
 	<injectable alias="moment">moment</injectable>
 </plat-resources>
-<div>
-	<ul class="listview bills" plat-control="plat-foreach" plat-context="bills">
+<div class="bills">
+	<ul class="listview" plat-control="plat-foreach" plat-context="bills">
 		<li class="billitem" plat-tap="paybill(id)">
 			<div class="bill-icon {{ @moment.getBillUrgency(nextduedate) }}">
 				<img plat-src="./images/{{billtype}}.png" alt="" class="">

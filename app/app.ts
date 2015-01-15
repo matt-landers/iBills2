@@ -38,6 +38,7 @@ class App extends plat.App {
      */
     error(ev: plat.events.IErrorEvent<Error>) {
         // log or handle errors at a global level
+        alert(ev.error);
         console.log(ev.error);
     }
 
