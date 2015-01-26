@@ -23,7 +23,6 @@ class BillsViewControl extends BaseViewControl {
     }
     navigatedTo(){
         this.context.bills = [];
-        console.log('bills nto');
         this.navbar.visible(true);
         this.navbar.title('Bills');
         this.navbar.showDrawer(true);
