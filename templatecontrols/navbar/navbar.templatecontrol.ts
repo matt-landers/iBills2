@@ -38,4 +38,4 @@ class Navbar extends BaseTemplateControl {
 
 export = Navbar;
 
-plat.register.control('navbar', Navbar, [plat.routing.INavigatorInstance], true);
+plat.register.control('navbar', Navbar, [plat.routing.Navigator], true);

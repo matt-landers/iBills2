@@ -14,7 +14,7 @@ class BillsViewControl extends BaseViewControl {
     };
     client: any;
     bills: any;
-    constructor(azure: AzureMobileServices, public utils: plat.IUtils, public navbar: Navbar){
+    constructor(azure: AzureMobileServices, public navbar: Navbar){
         super();
         this.client = azure.client;
     }
@@ -58,4 +58,4 @@ class BillsViewControl extends BaseViewControl {
 
 export = BillsViewControl;
 
-plat.register.viewControl('billsViewControl', BillsViewControl, [AzureMobileServices, plat.IUtils, Navbar]);
+plat.register.viewControl('billsViewControl', BillsViewControl, [AzureMobileServices, Navbar]);

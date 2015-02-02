@@ -26,4 +26,4 @@ interface IDrawerContext {
 
 export = Drawer;
 
-plat.register.control('drawer', Drawer, [plat.routing.INavigatorInstance], true);
+plat.register.control('drawer', Drawer, [plat.routing.Navigator], true);

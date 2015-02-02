@@ -18,7 +18,7 @@ class AddBillViewControl extends BaseViewControl {
     client: any;
     payments: any;
     bills: any;
-    constructor(azure: AzureMobileServices, public utils: plat.IUtils, public navbar: Navbar){
+    constructor(azure: AzureMobileServices, public navbar: Navbar){
         super();
         this.client = azure.client;
         console.log('addbill constructor');
@@ -45,7 +45,7 @@ class AddBillViewControl extends BaseViewControl {
         this.context.showBillTypes = true;
     }
     hideBillTypeModal(billtype: any){
-        if(this.utils.isString(billtype)){
+        if(this.$utils.isString(billtype)){
             this.context.billtype = billtype;
         }
         this.context.showBillTypes = false;
@@ -65,4 +65,4 @@ class AddBillViewControl extends BaseViewControl {
 export = AddBillViewControl;
 
 plat.register.viewControl('addbillViewControl', 
-    AddBillViewControl, [AzureMobileServices, plat.IUtils, Navbar]);
+    AddBillViewControl, [AzureMobileServices, Navbar]);

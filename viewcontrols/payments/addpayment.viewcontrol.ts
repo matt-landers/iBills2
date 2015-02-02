@@ -17,7 +17,7 @@ class AddPaymentViewControl extends BaseViewControl {
     payments: any;
     bills: any;
     billid: number;
-    constructor(azure: AzureMobileServices, public utils: plat.IUtils, public navbar: Navbar){
+    constructor(azure: AzureMobileServices, public navbar: Navbar){
         super();
         console.log('addpayment constructor');
         this.client = azure.client;
@@ -66,4 +66,4 @@ export = AddPaymentViewControl;
 
 plat.register.viewControl('addpaymentViewControl', 
     AddPaymentViewControl, 
-    [AzureMobileServices, plat.IUtils, Navbar]);
+    [AzureMobileServices, Navbar]);

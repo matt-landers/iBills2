@@ -2,7 +2,7 @@
 import plat = require('platypus');
 
 class BaseTemplateControl extends plat.ui.TemplateControl {
-	$utils = plat.acquire(plat.IUtils);
+	$utils: plat.Utils = plat.acquire(plat.Utils);
 }
 
 export = BaseTemplateControl

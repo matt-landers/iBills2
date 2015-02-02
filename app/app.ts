@@ -21,42 +21,26 @@ class App extends plat.App {
         ]);
     }
 
-    /**
-     * Event fired when the app is ready
-     * @param ev The ILifecycleEvent object
-     */
-    ready(ev: plat.events.ILifecycleEvent) {
+    ready(ev: plat.events.LifecycleEvent) {
         // can be used to configure various 
         // settings prior to loading the 
         // rest of the application
         console.log('App is ready!');
     }
 
-    /**
-     * Event fired when an internal error occurs.
-     * @param ev The IErrorEvent object.
-     */
-    error(ev: plat.events.IErrorEvent<Error>) {
+    error(ev: plat.events.ErrorEvent<Error>) {
         // log or handle errors at a global level
         alert(ev.error);
         console.log(ev.error);
     }
 
-    /**
-     * Event fired when the app is suspended.
-     * @param ev The ILifecycleEvent object.
-     */
-    suspend(ev: plat.events.ILifecycleEvent) {
+    suspend(ev: plat.events.LifecycleEvent) {
         // if running on a device,
         // this is where you want to save important 
         // data and finish ongoing processes.
     }
-
-    /**
-     * Event fired when the app resumes from the suspended state.
-     * @param ev The ILifecycleEvent object.
-     */
-    resume(ev: plat.events.ILifecycleEvent) {
+    
+    resume(ev: plat.events.LifecycleEvent) {
         // if running on a device,
         // this is where you want to re-initialize 
         // the app state.
@@ -65,6 +49,6 @@ class App extends plat.App {
     }
 }
 
-plat.register.app('ibills', App, [plat.routing.IRouter]);
+plat.register.app('ibills', App, [plat.routing.Router]);
 
 export = App;
