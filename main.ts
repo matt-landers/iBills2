@@ -7,7 +7,7 @@
 
 //platypus
 require('platypus');
-require('./lib/platypusui/platypusui');
+require('./node_modules/platypusui/platypusui');
 // app
 require('./app/app');
 
